@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1=title
+  a(href="/new") 
+    button.btn.btn-default(type="button", data-dismiss="modal") Add New Message
+  - for (var i = 0; i < messages.length; i++)
+    li(style='white-space:pre;')= messages[i].text + ' Author: ' + messages[i].user + ' CreatedAt: ' + messages[i].added
